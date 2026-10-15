@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProduVendedorActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardTp"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#802DCB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:shapeAppearanceOverlay="@style/RoundedTopCornersCard"
+        android:layout_marginBottom="100dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hola Vendedor "
+            android:textSize="20dp"
+            android:textColor="#FFF"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            >
+
+        </TextView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/llTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/cardTp">
+
+        <!-- Pestaña Mis Productos (Seleccionada) -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_perfilv"
+            android:gravity="center"
+            android:text="Mis Productos"
+            android:textColor="#4A3410"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+
+            android:background="@drawable/mis_productos"
+            android:gravity="center"
+            android:text="Mi Perfil"
+            android:textColor="#4A4A4A"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/llTabs"
+        tools:layout_editor_absoluteX="6dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgProd1"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <TextView
+            android:id="@+id/tvNombre1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Gomitas Gabo"
+            android:textColor="#2D2039"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnEdit1"
+            app:layout_constraintStart_toEndOf="@+id/imgProd1"
+            app:layout_constraintTop_toTopOf="@+id/imgProd1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="$10"
+            android:textColor="#5B198B"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvNombre1"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombre1" />
+
+        <!-- Icono Editar -->
+        <ImageView
+            android:id="@+id/btnEdit1"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="200dp"
+
+            android:src="@android:drawable/ic_menu_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnDelete1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#5B198B" />
+
+        <!-- Icono Eliminar -->
+        <ImageView
+            android:id="@+id/btnDelete1"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="8dp"
+            android:src="@android:drawable/ic_menu_delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#E53935" />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
