@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CrearCuentaActivity" android:background="#FFF">
+    tools:context=".CrearCuentaActivity" android:background="#FFFFFF">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardTp"
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Crear Cuenta"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="#FFF"
             android:layout_marginLeft="80dp"
             android:layout_marginTop="30dp"
@@ -61,6 +61,13 @@
             android:orientation="vertical"
             android:padding="28dp">
 
+            <ImageView
+                android:id="@+id/loboCvendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="vendedorC"
+                android:src="@drawable/crearcuenta_vendedor" />
+
 
             <!-- Titulo de la pantalla -->
             <TextView
@@ -82,9 +89,8 @@
                 android:layout_gravity="left"
                 android:layout_marginBottom="5dp"
                 android:text="Nombre / Usuario"
-                android:textSize="15dp"
                 android:textColor="#786F8A"
-                >
+                android:textSize="15sp">
 
             </TextView>
 
@@ -111,7 +117,7 @@
                 android:layout_gravity="left"
                 android:layout_marginBottom="5dp"
                 android:text="Correo"
-                android:textSize="15dp">
+                android:textSize="15sp">
 
             </TextView>
 
@@ -139,7 +145,7 @@
                 android:layout_gravity="left"
                 android:layout_marginBottom="5dp"
                 android:text="Contraseña"
-                android:textSize="15dp">
+                android:textSize="15sp">
 
             </TextView>
 
@@ -166,15 +172,13 @@
                 android:layout_height="55dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/bg_button"
+                android:elevation="20dp"
                 android:text="Registrar"
                 android:textAllCaps="false"
                 android:textColor="#FFFF"
-                android:textStyle="bold"
-                android:elevation="20dp"
-                />
+                android:textStyle="bold" />
 
             <!--  BOTON PARA REGISTRARSE-->
-
 
 
         </LinearLayout>

@@ -7,13 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper
 // crear clase dabatabehelper que hereda de SQLiteOpenHelper
 
 class Databasehelper(context: Context) : SQLiteOpenHelper(
-
     context,
     DATABSE_NAME,
     null,
-    DATABASE_VERSION
-
-) {
+    DATABASE_VERSION) {
     //datos de la base de datos
     companion object {
         //informacion de la bd
@@ -39,48 +36,30 @@ class Databasehelper(context: Context) : SQLiteOpenHelper(
                 $COL_CONTRASEÑA TEXT NOT NULL
             )
         """.trimIndent()
-
         //crear tabla usuario
         db?.execSQL(createTable)
-
-
-
-
     }
-
-
-
     // metodo onupagrande
-
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("DROP TABLE IF EXISTS $TABLE_USUARIOS")
         onCreate(db)
     }
-
     //metodo para registrar un usuario es decir un insert
     fun registrarUsuario(nombre: String, correo: String, password: String) : Boolean {
-
         //crear variable para escribir en la base de datos
         val db = writableDatabase
-
         //insertar los datos
         val datos = ContentValues().apply{
             put(COL_NOMBRE, nombre )
             put(COL_CORREO, correo)
             put(COL_CONTRASEÑA, password)
-
         }
         //ejecutar insercion de datos
         val resultado = db.insert(TABLE_USUARIOS, null, datos)
-
         //cerrar conexcion de la bd
         db.close()
-
         //regresar el valor obtenido de la insecion si es verdadero o es falso
         return resultado != -1L
-
-
-
     }
 
     //metodo para iniciar sesion consulta ,
@@ -90,7 +69,6 @@ class Databasehelper(context: Context) : SQLiteOpenHelper(
         val db = readableDatabase
 
         //crear consulta
-
         val query_sql = """
             SELECT * FROM $TABLE_USUARIOS
             WHERE $COL_CORREO = ? AND $COL_CONTRASEÑA = ?
@@ -104,14 +82,10 @@ class Databasehelper(context: Context) : SQLiteOpenHelper(
         //cerrar conexion de la base de datos
         cursos.close()
         db.close()
-
         return usuairoentonctrado
 
 
 
 
-
     }
-
-
 }

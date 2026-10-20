@@ -17,10 +17,8 @@ class CrearCuentaActivity : AppCompatActivity() {
     private lateinit var etCorreo: EditText
     private lateinit var etPassword: EditText
     private lateinit var btnRegistrar: Button
-
     //Instancia database helper
     private lateinit var dbHelper: Databasehelper
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -40,24 +38,28 @@ class CrearCuentaActivity : AppCompatActivity() {
 
     //Metodos por aqui
     private fun registrarUsuario(){
+
         val nombre  = etNombre.text.toString().trim()
         val correo = etCorreo.text.toString().trim()
         val password = etPassword.text.toString().trim()
 
         if(nombre.isEmpty() || correo.isEmpty() || password.isEmpty()){
-            Toast.makeText(this, "Completa todos los campos.!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Completa todos los campos.!",
+                Toast.LENGTH_SHORT).show()
             return
         }
         
         // Variable que guarda el resultado del registro y llama a la db
         val registro = dbHelper.registrarUsuario(nombre, correo, password)
         if(registro){
-            Toast.makeText(this, "Usuario creado con Exito!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Usuario creado con Exito!",
+                Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             this.finish()
         }else{
-            Toast.makeText(this, "Hubo un problema, intentalo de nuevo!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Hubo un problema, intentalo de nuevo!",
+                Toast.LENGTH_SHORT).show()
         }
     }
 }

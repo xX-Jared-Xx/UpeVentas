@@ -12,23 +12,18 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var etCorreo : EditText
     private lateinit var  etPassword: EditText
     private lateinit var  btnIngresar: Button
-
     private lateinit var  dbHelper: Databasehelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
-
         etCorreo = findViewById(R.id.etMatricula)
         etPassword = findViewById(R.id.etPass)
         btnIngresar = findViewById(R.id.btnLogin)
-
         dbHelper = Databasehelper(this)
 
         // Evento pra iniciar sesion
@@ -37,13 +32,11 @@ class MainActivity : AppCompatActivity() {
             iniciarSesion()
 
         }
-
         val tvCrearCuenta = findViewById<TextView>(R.id.tvCrearCuenta)
         tvCrearCuenta.setOnClickListener {
             val intent = Intent(this, CrearCuentaActivity::class.java)
             startActivity(intent)
         }
-
     }
 
     // Metdo para iniciar sesion

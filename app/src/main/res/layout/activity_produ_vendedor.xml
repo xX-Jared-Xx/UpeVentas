@@ -75,11 +75,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_width="404dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="60dp"
         android:orientation="horizontal"
         android:padding="12dp"
-        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/llTabs"
         tools:layout_editor_absoluteX="6dp">
 
@@ -88,17 +91,19 @@
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:scaleType="centerCrop"
-            android:src="@android:drawable/ic_menu_gallery"
+            android:src="@drawable/gomitas"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
         </com.google.android.material.imageview.ShapeableImageView>
 
+        <!-- Icono Editar -->
+
         <TextView
             android:id="@+id/tvNombre1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="128dp"
+            android:layout_height="31dp"
             android:layout_marginStart="16dp"
             android:text="Gomitas Gabo"
             android:textColor="#2D2039"
@@ -108,9 +113,10 @@
             app:layout_constraintStart_toEndOf="@+id/imgProd1"
             app:layout_constraintTop_toTopOf="@+id/imgProd1" />
 
+        <!-- Icono Eliminar -->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="35dp"
+            android:layout_height="28dp"
             android:layout_marginTop="4dp"
             android:text="$10"
             android:textColor="#5B198B"
@@ -119,33 +125,163 @@
             app:layout_constraintStart_toStartOf="@+id/tvNombre1"
             app:layout_constraintTop_toBottomOf="@+id/tvNombre1" />
 
-        <!-- Icono Editar -->
-        <ImageView
-            android:id="@+id/btnEdit1"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:layout_marginLeft="200dp"
-
-            android:src="@android:drawable/ic_menu_edit"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnDelete1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="#5B198B" />
-
-        <!-- Icono Eliminar -->
         <ImageView
             android:id="@+id/btnDelete1"
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginEnd="8dp"
             android:src="@android:drawable/ic_menu_delete"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:tint="#E53935" />
+
+        <ImageView
+            android:id="@+id/btnEdit1"
+            android:layout_width="19dp"
+            android:layout_height="22dp"
+
+            android:src="@android:drawable/ic_menu_edit"
+            app:tint="#5B198B" />
 
     </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="404dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="160dp"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTabs"
+        tools:layout_editor_absoluteX="6dp">
 
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgcarlota"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pablocookies"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <!-- Icono Editar -->
+
+        <TextView
+            android:id="@+id/tvNombre2"
+            android:layout_width="128dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="16dp"
+            android:text="Pablo Cookies"
+            android:textColor="#2D2039"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnEdit1"
+            app:layout_constraintStart_toEndOf="@+id/imgProd1"
+            app:layout_constraintTop_toTopOf="@+id/imgProd1" />
+
+        <!-- Icono Eliminar -->
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="4dp"
+            android:text="$12"
+            android:textColor="#5B198B"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvNombre2"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombre2" />
+
+        <ImageView
+            android:id="@+id/btnDeleteC"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="8dp"
+            android:src="@android:drawable/ic_menu_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="#E53935" />
+
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+
+            android:src="@android:drawable/ic_menu_edit"
+            app:tint="#5B198B" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="404dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="260dp"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTabs"
+        tools:layout_editor_absoluteX="6dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgProd3"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/papucarlotas"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <!-- Icono Editar -->
+
+        <TextView
+            android:id="@+id/tvNombre3"
+            android:layout_width="128dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="16dp"
+            android:text="Papu Carlotas"
+            android:textColor="#2D2039"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnEdit1"
+            app:layout_constraintStart_toEndOf="@+id/imgProd1"
+            app:layout_constraintTop_toTopOf="@+id/imgProd1" />
+
+        <!-- Icono Eliminar -->
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="4dp"
+            android:text="$25"
+            android:textColor="#5B198B"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvNombre1"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombre1" />
+
+        <ImageView
+            android:id="@+id/btnDelete3"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="8dp"
+            android:src="@android:drawable/ic_menu_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="#E53935" />
+
+        <ImageView
+            android:id="@+id/btnEdit3"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+
+            android:src="@android:drawable/ic_menu_edit"
+            app:tint="#5B198B" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
