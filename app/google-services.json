@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1027536141519",
+    "project_id": "upeventasapp",
+    "storage_bucket": "upeventasapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027536141519:android:a43f18fbd730285037cbba",
+        "android_client_info": {
+          "package_name": "com.example.upeventas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027536141519-6pso0b7l1p8hkhs1r53c6r6obuvq6ms3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.upeventas",
+            "certificate_hash": "fd19a1469f87e5418838852ff2418e22ab353763"
+          }
+        },
+        {
+          "client_id": "1027536141519-mna034nqdgah23jl35nq1gi3n46k2hs8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ9jYivEVuKchHPkZ_Io4i1a8WxZqh_To"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1027536141519-mna034nqdgah23jl35nq1gi3n46k2hs8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProduVendedorActivity"
+    android:background="@color/white"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEnc"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:backgroundTint="#802DCB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <LinearLayout
+            android:id="@+id/layoutEncabezado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+
+            <!-- Titulo de la pantalla -->
+            <TextView
+                android:layout_marginTop="30dp"
+                android:id="@+id/tvEncabezado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Platillos y Comidas"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="#F2EFF8"
+        android:layout_marginTop="140dp"
+        android:padding="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- TEXTO PARA SABER EL ESTADO DE CARGA DEL API -->
+            <TextView
+                android:id="@+id/tvResultado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Cargando"
+                android:textColor="#390947"
+                android:textSize="15sp" />
+
+            <!-- TÍTULO DEL GÉNERO / INICIO DE SECCION -->
+            <TextView
+                android:id="@+id/tvPrimerPlatillo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:text="Italiana"
+                android:textColor="#781370"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!-- SCROLLVIEW DEL GÉNERO INDIE -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:clipToPadding="false"
+                android:fillViewport="false"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:scrollbars="none">
+
+                <!-- CONTENEDOR DEL GENERO INDIE -->
+                <LinearLayout
+                    android:id="@+id/contenedoruno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+            </HorizontalScrollView>
+
+            <!-- TEXTO PARA SABER EL ESTADO DE CARGA DEL API -->
+            <TextView
+                android:id="@+id/tvResultado2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Cargando"
+                android:textColor="#781370"
+                android:textSize="15sp" />
+
+            <!-- TÍTULO DEL GÉNERO / INICIO DE SECCION -->
+            <TextView
+                android:id="@+id/tvSegPlatillo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:text="Mexicana"
+                android:textColor="#781370"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!-- SCROLLVIEW DEL GÉNERO TOP -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:clipToPadding="false"
+                android:fillViewport="false"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:scrollbars="none">
+
+                <!-- CONTENEDOR DEL GENERO TOP -->
+                <LinearLayout
+                    android:id="@+id/contenedorSeg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+            </HorizontalScrollView>
+
+            <!-- TEXTO PARA SABER EL ESTADO DE CARGA DEL API -->
+            <TextView
+                android:id="@+id/tvResultado3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Cargando"
+                android:textColor="#781370"
+                android:textSize="15sp" />
+
+            <!-- TÍTULO DEL GÉNERO / INICIO DE SECCION -->
+            <TextView
+                android:id="@+id/tvTerPlatillo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:text="Japonesa"
+                android:textColor="#781370"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!-- SCROLLVIEW DEL GÉNERO ROCK -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:clipToPadding="false"
+                android:fillViewport="false"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:scrollbars="none">
+
+                <!-- CONTENEDOR DEL GENERO ROCK -->
+                <LinearLayout
+                    android:id="@+id/contenedorTres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#46116D"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

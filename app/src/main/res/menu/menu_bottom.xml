@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!--CReAR OS ELEMNtOS DEL MENU -->
+    <item android:id="@+id/nav_inicio"
+        android:icon="@drawable/icon_home_menu"
+        android:title="HOME"/>
+    <item android:id="@+id/nav_fav"
+        android:icon="@drawable/megusta2"
+        android:title="HOME"/>
+</menu>

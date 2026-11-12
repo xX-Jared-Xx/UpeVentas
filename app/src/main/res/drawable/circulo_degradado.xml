@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <gradient
+        android:type="radial"
+        android:gradientRadius="50dp"
+        android:startColor="#F1FFFFFF"
+        android:endColor="#D3FFFFFF" />
+
+    <!-- Opcional: Define un tamaño base para el círculo -->
+    <size
+        android:width="200dp"
+        android:height="200dp" />
+
+</shape>
